@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x;
+    x = prompt('Введите число');
+
+    do {
+        n = prompt('Введите степень (целое, положительное число)');
+    }
+    while (!Number.isInteger(Number(n)) || n < 0);
+
+    let result = pow(x, n);
+    alert(`${x} в степени ${n} = ${result}`);
+
+    function pow(x, n) {
+        return x ** n;
+    }
+</script>
+
+</body>
+</html>

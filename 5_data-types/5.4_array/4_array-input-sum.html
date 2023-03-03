@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    function sumInput() {
+        let numbers = inputNum();
+        let sum = sumNum(numbers);
+        return sum;
+    }
+
+
+    function inputNum() {
+        let numbers = [];
+        let num;
+        console.log('начало');
+        while (true) {
+            num = prompt('Введите число');
+            if (!isFinite(num) || num == '' || num == null) {
+                return numbers;
+            }
+            numbers.push(Number(num));
+        }
+    }
+
+
+    function sumNum(numbers) {
+        let sum = 0;
+        for (let num of numbers) {
+            sum += num;
+        }
+        return sum;
+    }
+
+
+    console.log(sumInput())
+
+</script>
+
+</body>
+</html>
